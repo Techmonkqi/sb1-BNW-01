@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Welcome">
+  <div class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+          Welcome to Bolt's.New.Web
+        </h1>
+        <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+          Your ultimate resource for mastering Bolt.new - The revolutionary AI development platform
+        </p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-gray-900">Latest Articles</h2>
+          <p class="mt-2 text-gray-600">Explore our comprehensive guides and tutorials</p>
+          <a href="/blog" class="mt-4 inline-flex items-center text-bolt-primary">
+            Browse articles →
+          </a>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-gray-900">Community</h2>
+          <p class="mt-2 text-gray-600">Join discussions and share your experiences</p>
+          <a href="/community" class="mt-4 inline-flex items-center text-bolt-primary">
+            Join community →
+          </a>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-gray-900">FAQ</h2>
+          <p class="mt-2 text-gray-600">Find answers to common questions</p>
+          <a href="/faq" class="mt-4 inline-flex items-center text-bolt-primary">
+            View FAQ →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

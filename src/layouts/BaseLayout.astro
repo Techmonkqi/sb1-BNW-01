@@ -1,0 +1,42 @@
+---
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | Bolt's.New.Web</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <a href="/" class="flex items-center text-bolt-primary font-bold text-xl">
+              Bolt's.New.Web
+            </a>
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <a href="/blog" class="inline-flex items-center px-1 pt-1 text-gray-900">Blog</a>
+              <a href="/faq" class="inline-flex items-center px-1 pt-1 text-gray-900">FAQ</a>
+              <a href="/community" class="inline-flex items-center px-1 pt-1 text-gray-900">Community</a>
+              <a href="/about" class="inline-flex items-center px-1 pt-1 text-gray-900">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="bg-white mt-12">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+          <div class="text-base text-gray-400">&copy; 2024 Bolt's.New.Web. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

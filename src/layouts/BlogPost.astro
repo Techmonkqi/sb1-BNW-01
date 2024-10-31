@@ -1,0 +1,21 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { format } from 'date-fns';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <article class="max-w-4xl mx-auto px-4 py-8">
+    <div class="prose prose-lg mx-auto">
+      <h1 class="text-4xl font-bold mb-4">{frontmatter.title}</h1>
+      <div class="text-gray-600 mb-8">
+        <time datetime={frontmatter.date}>
+          {format(new Date(frontmatter.date), 'MMMM d, yyyy')}
+        </time>
+        {frontmatter.author && <span> · {frontmatter.author}</span>}
+      </div>
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

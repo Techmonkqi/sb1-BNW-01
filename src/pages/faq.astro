@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: "What is Bolt.new?",
+    answer: "Bolt.new is an AI-powered development platform that revolutionizes how developers create, test, and deploy applications. It provides real-time collaboration, instant development environments, and intelligent code assistance."
+  },
+  {
+    question: "How can I make money with Bolt.new?",
+    answer: "There are several ways to monetize your Bolt.new expertise: become an affiliate partner, create and sell custom templates, offer consulting services, or create educational content about the platform."
+  },
+  {
+    question: "How does Bolt.new improve SEO?",
+    answer: "Bolt.new includes built-in SEO optimization tools, generates semantic HTML, and provides performance insights that help improve your website's search engine rankings."
+  },
+  {
+    question: "Is Bolt.new suitable for beginners?",
+    answer: "Yes! Bolt.new is designed to be accessible for developers of all skill levels. The AI assistance helps beginners write better code while learning best practices."
+  },
+  {
+    question: "What programming languages does Bolt.new support?",
+    answer: "Bolt.new supports all major programming languages and frameworks, including JavaScript, Python, Ruby, PHP, and many more."
+  }
+];
+---
+
+<BaseLayout title="FAQ">
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Frequently Asked Questions
+      </h2>
+      <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+        {faqs.map((faq) => (
+          <div class="pt-6">
+            <dt class="text-lg">
+              <span class="font-medium text-gray-900">{faq.question}</span>
+            </dt>
+            <dd class="mt-2 text-base text-gray-500">{faq.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</BaseLayout>
